@@ -1,6 +1,6 @@
-import React from 'react';
-import { render, fireEvent, waitFor, screen } from '@testing-library/react';
-import RegistrationForm from './RegistrationForm';
+import React from "react";
+import { render, fireEvent, waitFor, screen } from "@testing-library/react";
+import RegistrationForm from "./RegistrationForm";
 
 // Define a mock submitHandler function
 // const submitHandler = jest.fn();
@@ -11,23 +11,23 @@ import RegistrationForm from './RegistrationForm';
 //   default: submitHandler,
 // }));
 
-describe('RegistrationForm component', () => {
-  test('renders all input fields correctly', () => {
+describe("RegistrationForm component", () => {
+  test("renders all input fields correctly", () => {
     render(<RegistrationForm />);
-    expect(screen.getByLabelText('Username:')).toBeInTheDocument();
-    expect(screen.getByLabelText('Email:')).toBeInTheDocument();
-    expect(screen.getByLabelText('Password:')).toBeInTheDocument();
+    expect(screen.getByLabelText("Username:")).toBeInTheDocument();
+    expect(screen.getByLabelText("Email:")).toBeInTheDocument();
+    expect(screen.getByLabelText("Password:")).toBeInTheDocument();
     // expect(screen.getByLabelText('Gender:')).toBeInTheDocument();
     // expect(screen.getByLabelText('Interests:')).toBeInTheDocument();
-    expect(screen.getByLabelText('Country:')).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'Submit' })).toBeInTheDocument();
-    expect(screen.getByText('Male')).toBeInTheDocument();
-    expect(screen.getByText('Female')).toBeInTheDocument();
-    expect(screen.getByText('Reading')).toBeInTheDocument();
-    expect(screen.getByText('Sports')).toBeInTheDocument();
-    expect(screen.getByText('USA')).toBeInTheDocument();
-    expect(screen.getByText('UK')).toBeInTheDocument();
-    expect(screen.getByText('India')).toBeInTheDocument();
+    expect(screen.getByLabelText("Country:")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Submit" })).toBeInTheDocument();
+    expect(screen.getByText("Male")).toBeInTheDocument();
+    expect(screen.getByText("Female")).toBeInTheDocument();
+    expect(screen.getByText("Reading")).toBeInTheDocument();
+    expect(screen.getByText("Sports")).toBeInTheDocument();
+    expect(screen.getByText("USA")).toBeInTheDocument();
+    expect(screen.getByText("UK")).toBeInTheDocument();
+    expect(screen.getByText("India")).toBeInTheDocument();
   });
 
   // test('submits form with correct data', async () => {
@@ -53,40 +53,36 @@ describe('RegistrationForm component', () => {
   //   });
   // });
 
+  // Define a mock submitHandler function
+  // const submitHandler = jest.fn();
 
+  // Mock the submitHandler function
+  // jest.mock('./submitHandler', () => ({
+  //   __esModule: true,
+  //   default: submitHandler,
+  // }));
 
-
-// Define a mock submitHandler function
-// const submitHandler = jest.fn();
-
-// Mock the submitHandler function
-// jest.mock('./submitHandler', () => ({
-//   __esModule: true,
-//   default: submitHandler,
-// }));
-
-// describe('RegistrationForm component', () => {
-//   test('renders all input fields correctly', () => {
-//     render(<RegistrationForm />);
-//     expect(screen.getByLabelText('Username:')).toBeInTheDocument();
-//     expect(screen.getByLabelText('Email:')).toBeInTheDocument();
-//     expect(screen.getByLabelText('Password:')).toBeInTheDocument();
-//     // expect(screen.getByLabelText('Gender:')).toBeInTheDocument();
-//     // expect(screen.getByLabelText('Interests:')).toBeInTheDocument();
-//     expect(screen.getByLabelText('Country:')).toBeInTheDocument();
-//     expect(screen.getByRole('button', { name: 'Submit' })).toBeInTheDocument();
-//     expect(screen.getByText('Male')).toBeInTheDocument();
-//     expect(screen.getByText('Female')).toBeInTheDocument();
-//     expect(screen.getByText('Reading')).toBeInTheDocument();
-//     expect(screen.getByText('Sports')).toBeInTheDocument();
-//     expect(screen.getByText('USA')).toBeInTheDocument();
-//     expect(screen.getByText('UK')).toBeInTheDocument();
-//     expect(screen.getByText('India')).toBeInTheDocument();
-//   });
+  // describe('RegistrationForm component', () => {
+  //   test('renders all input fields correctly', () => {
+  //     render(<RegistrationForm />);
+  //     expect(screen.getByLabelText('Username:')).toBeInTheDocument();
+  //     expect(screen.getByLabelText('Email:')).toBeInTheDocument();
+  //     expect(screen.getByLabelText('Password:')).toBeInTheDocument();
+  //     // expect(screen.getByLabelText('Gender:')).toBeInTheDocument();
+  //     // expect(screen.getByLabelText('Interests:')).toBeInTheDocument();
+  //     expect(screen.getByLabelText('Country:')).toBeInTheDocument();
+  //     expect(screen.getByRole('button', { name: 'Submit' })).toBeInTheDocument();
+  //     expect(screen.getByText('Male')).toBeInTheDocument();
+  //     expect(screen.getByText('Female')).toBeInTheDocument();
+  //     expect(screen.getByText('Reading')).toBeInTheDocument();
+  //     expect(screen.getByText('Sports')).toBeInTheDocument();
+  //     expect(screen.getByText('USA')).toBeInTheDocument();
+  //     expect(screen.getByText('UK')).toBeInTheDocument();
+  //     expect(screen.getByText('India')).toBeInTheDocument();
+  //   });
 
   // RegistrationForm.test.js
-  
-  
+
   // describe('RegistrationForm', () => {
   //   it('renders all form elements', () => {
   //     render(<RegistrationForm />);
@@ -100,7 +96,7 @@ describe('RegistrationForm component', () => {
   //     expect(screen.getByLabelText(/Country/i)).toBeInTheDocument();
   //     expect(screen.getByRole('button', { name: /submit/i })).toBeInTheDocument();
   //   });
-  
+
   //   it('updates form data on input change', () => {
   //     render(<RegistrationForm />);
   //     fireEvent.change(screen.getByLabelText(/Username/i), { target: { value: 'testuser' } });
@@ -109,7 +105,7 @@ describe('RegistrationForm component', () => {
   //     fireEvent.click(screen.getByLabelText(/Male/i));
   //     fireEvent.click(screen.getByLabelText(/Reading/i));
   //     fireEvent.change(screen.getByLabelText(/Country/i), { target: { value: 'India' } });
-  
+
   //     expect(screen.getByLabelText(/Username/i)).toHaveValue('testuser');
   //     expect(screen.getByLabelText(/Email/i)).toHaveValue('test@example.com');
   //     expect(screen.getByLabelText(/Password/i)).toHaveValue('password123');
@@ -117,11 +113,6 @@ describe('RegistrationForm component', () => {
   //     expect(screen.getByLabelText(/Reading/i)).toBeChecked();
   //     expect(screen.getByLabelText(/Country/i)).toHaveValue('India');
   //   });
-  
-   
-  
-    // Add more test cases as per your component requirements to ensure 100% coverage
-  });
-  
 
-
+  // Add more test cases as per your component requirements to ensure 100% coverage
+});

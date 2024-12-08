@@ -1,12 +1,14 @@
-import React from 'react'
-import {useNavigate} from "react-router-dom"
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
-    const navigate=useNavigate()
+  const navigate = useNavigate();
   return (
     <div>
-        Home
-        <button onClick={()=>navigate("/userManagement")}>UserManagement</button>
+      Home
+      <button onClick={() => navigate("/userManagement")}>
+        UserManagement
+      </button>
     </div>
-  )
+  );
 }

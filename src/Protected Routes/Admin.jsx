@@ -9,8 +9,5 @@ export default function Admin({ component: Component, ...rest }) {
     return <Navigate to="/usestate" replace />;
   }
 
-  return (
-    <Component {...rest} />
-  );
+  return <Component {...rest} />;
 }
-

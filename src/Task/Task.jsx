@@ -1,14 +1,13 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Task() {
-    const navigate=useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div>
-        <button onClick={()=>navigate("/todolist")}>ToDO List</button>
-        <button onClick={()=>navigate("/task2")}>Task 2</button>
+      <button onClick={() => navigate("/todolist")}>ToDO List</button>
+      <button onClick={() => navigate("/task2")}>Task 2</button>
     </div>
-  )
+  );
 }

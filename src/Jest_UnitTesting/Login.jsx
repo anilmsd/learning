@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 
-
 const Login = () => {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -15,16 +14,13 @@ const Login = () => {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        "https://jsonplaceholder.typicode.com/users/1"
+        "https://jsonplaceholder.typicode.com/users/1",
       );
-        setUser(data);
-        setLoading(false);
-      
+      setUser(data);
+      setLoading(false);
     } catch {
-      
-        setError(true);
-        setLoading(false);
-     
+      setError(true);
+      setLoading(false);
     }
   };
 
@@ -60,7 +56,6 @@ const Login = () => {
 
 export default Login;
 
-
 // // Login.jsx
 // import React, { useState } from 'react';
 // import axios from 'axios';
@@ -93,4 +88,3 @@ export default Login;
 // };
 
 // export default Login;
-

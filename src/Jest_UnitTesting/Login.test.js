@@ -1,10 +1,10 @@
 //run this command
 //npm install --save-dev @testing-library/react @testing-library/jest-dom jest
 //npm run test
-import React from 'react';
+import React from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import Login from "./Login";
-const axios=require('axios');
+const axios = require("axios");
 
 // const MockAdapter = require('axios-mock-adapter');
 
@@ -16,8 +16,7 @@ const axios=require('axios');
 //   name: "Anil",
 // });
 
-
-//This ensures that when the axios.get function is called inside the Login component, 
+//This ensures that when the axios.get function is called inside the Login component,
 // it will not actually make a real HTTP request, but instead, it will return the mock data specified in the mock implementation.
 jest.mock("axios", () => ({
   __esModule: true,
@@ -59,8 +58,6 @@ jest.mock("axios", () => ({
 //     },
 //   },
 // }));
-
-
 
 test("username input should be rendered", () => {
   render(<Login />);
@@ -188,7 +185,6 @@ test("user should be rendered after fetching", async () => {
 
   expect(userItem).toBeInTheDocument();
 });
-
 
 // // Login.test.js
 // import React from 'react';

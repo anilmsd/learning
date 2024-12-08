@@ -4,7 +4,7 @@ export default function List({ getItems }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    console.log("child component rendered")
+    console.log("child component rendered");
     setData(getItems());
   }, [getItems]);
   return (
