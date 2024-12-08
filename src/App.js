@@ -15,14 +15,13 @@ import Login from "./Redux/Components/Login";
 import Logout from "./Redux/Components/Logout";
 import API from "./API/Crud";
 import LandingPage from "./API/Home";
-import Cookies from "js-cookie";
 import UserManagement from "./API/UserManagement";
 import Admin from "./Protected Routes/Admin";
 import ParentComponent from "./React Memo/ParentComponent";
 import ToDoList from "./Task/ToDoList";
 import Parent from "./ParentToChild/Parent";
-import ErrorBoundary from "./Error Boundary/ErrorBoundary";
-import ComponentA, { MainComponent } from "./Error Boundary/ComponentA";
+
+import  { MainComponent } from "./Error Boundary/ComponentA";
 import Task2 from "./Task/Task2";
 import Task from "./Task/Task";
 import "./../src/global.css";

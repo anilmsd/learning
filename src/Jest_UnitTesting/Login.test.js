@@ -4,7 +4,7 @@
 import React from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import Login from "./Login";
-const axios = require("axios");
+
 
 // const MockAdapter = require('axios-mock-adapter');
 
