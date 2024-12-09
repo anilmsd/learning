@@ -1,4 +1,4 @@
-# Step 1: Use a Node.js base image for building the app       git
+# Step 1: Use a Node.js base image for building the app     
 FROM node:20-alpine as build
 
 # Set the working directory in the container
