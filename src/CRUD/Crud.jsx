@@ -22,7 +22,7 @@ export default function Crud() {
   };
 
   const updateUser = () => {
-    let findUser = users.find((user) => user.name == name);
+    let findUser = users.find((user) => user.name === name);
     findUser.name = newUser;
     setNewUser("");
   };
