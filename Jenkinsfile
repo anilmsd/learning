@@ -31,6 +31,19 @@ pipeline {
         //     }
         // }
 
+        stage('Stop Existing Container') {
+    steps {
+        script {
+            def containers = sh(script: "docker ps -q -f 'ancestor=my-react-app'", returnStdout: true).trim()
+            if (containers) {
+                sh "docker stop ${containers}"
+                sh "docker rm ${containers}"
+            }
+        }
+    }
+}
+
+
         stage('Build Docker Image') {
             steps {
                 // Build the Docker image
