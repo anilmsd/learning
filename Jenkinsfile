@@ -10,27 +10,6 @@ pipeline {
     }
 
     stages {
-        // stage('Checkout Code') {
-        //     steps {
-        //         // Clone the repository containing your React project
-        //         git url: 'https://github.com/anilmsd/learning.git', branch: 'Main'
-        //     }
-        // }
-
-        // stage('Install Dependencies') {
-        //     steps {
-        //         // Install dependencies using npm
-        //         sh 'npm install'
-        //     }
-        // }
-
-        // stage('Build React App') {
-        //     steps {
-        //         // Build the React app using npm
-        //         sh 'npm run build'
-        //     }
-        // }
-
         stage('Build Docker Image') {
             steps {
                 // Build the Docker image
